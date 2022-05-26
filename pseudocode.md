@@ -68,7 +68,7 @@ THEN I am logged out of the site and presented with a menu with the options Sear
 
 You’ll need to complete the following tasks in each of these back-end files:
 
-- `auth.js`: Update the auth middleware function to work with the GraphQL API.
+- `auth.js`: Update the auth middleware function to work with the GraphQL API. // DONE - just added req.body.token
 
 - `server.js`: Implement the Apollo Server and apply it to the Express server as middleware.
 
