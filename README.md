@@ -78,7 +78,7 @@ THEN I am logged out of the site and presented with a menu with the options Sear
 
 ## Installation Instructions
 `npm i` to install
-`node index.js` to start 
+`npm start` to start 
 
 ## Github Repository 
 [Github Repository](https://github.com/choilina16/book-search-engine)
