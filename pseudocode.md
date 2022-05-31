@@ -80,53 +80,55 @@ You’ll need to complete the following tasks in each of these back-end files:
 
     **Hint**: Use the functionality in the `user-controller.js` as a guide.
 
-  - `typeDefs.js`: Define the necessary `Query` and `Mutation` types:
+DONE
 
-    - `Query` type:
+- `typeDefs.js`: Define the necessary `Query` and `Mutation` types:
 
-      - `me`: Which returns a `User` type.
+  - `Query` type:
 
-    - `Mutation` type:
+    - `me`: Which returns a `User` type.
 
-      - `login`: Accepts an email and password as parameters; returns an `Auth` type.
+  - `Mutation` type:
 
-      - `addUser`: Accepts a username, email, and password as parameters; returns an `Auth` type.
+    - `login`: Accepts an email and password as parameters; returns an `Auth` type.
 
-      - `saveBook`: Accepts a book author's array, description, title, bookId, image, and link as parameters; returns a `User` type. (Look into creating what's known as an `input` type to handle all of these parameters!)
+    - `addUser`: Accepts a username, email, and password as parameters; returns an `Auth` type.
 
-      - `removeBook`: Accepts a book's `bookId` as a parameter; returns a `User` type.
+    - `saveBook`: Accepts a book author's array, description, title, bookId, image, and link as parameters; returns a `User` type. (Look into creating what's known as an `input` type to handle all of these parameters!)
 
-    - `User` type:
+    - `removeBook`: Accepts a book's `bookId` as a parameter; returns a `User` type.
 
-      - `_id`
+  - `User` type:
 
-      - `username`
+    - `_id`
 
-      - `email`
+    - `username`
 
-      - `bookCount`
+    - `email`
 
-      - `savedBooks` (This will be an array of the `Book` type.)
+    - `bookCount`
 
-    - `Book` type:
+    - `savedBooks` (This will be an array of the `Book` type.)
 
-      - `bookId` (Not the `_id`, but the book's `id` value returned from Google's Book API.)
+  - `Book` type:
 
-      - `authors` (An array of strings, as there may be more than one author.)
+    - `bookId` (Not the `_id`, but the book's `id` value returned from Google's Book API.)
 
-      - `description`
+    - `authors` (An array of strings, as there may be more than one author.)
 
-      - `title`
+    - `description`
 
-      - `image`
+    - `title`
 
-      - `link`
+    - `image`
 
-    - `Auth` type:
+    - `link`
 
-      - `token`
+  - `Auth` type:
 
-      - `user` (References the `User` type.)
+    - `token`
+
+    - `user` (References the `User` type.)
 
 ### Front-End Specifications
 

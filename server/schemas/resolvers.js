@@ -1,28 +1,34 @@
+// HINT: look at the functionality in the user-controller.js as a guide
+
 const { Book, User } = require('../models');
 
 const resolvers = {
+  // GET REQUEST
   Query: {
-    tech: async () => {
-      return Tech.find({});
-    },
-    matchups: async (parent, { _id }) => {
+    // needs to be "me" because the readme wanted the typeDefs for query to be "me: User"
+    // GET SINGLE USER
+    me: async (parent, { _id }) => { 
       const params = _id ? { _id } : {};
-      return Matchup.find(params);
-    },
+      return User.find(params);
+    }
   },
+
+  // POST, PUT, DELETE REQUEST
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
+    createUser: async (parent, args) => {
+      const user = await User.create(args);
+      return user;
     },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
-    },
+
+    login:
+
+    // FIND ONE & UPDATE
+    saveBook: async(parent, { _id, savedBook }) => {
+      const book = await Book.findOneAndUpdate(
+        {}
+      )
+    }
+    deleteBook:
   },
 };
 

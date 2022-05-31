@@ -1,4 +1,5 @@
 // TODO: auth.js: Update the auth middleware function to work with the GraphQL API.
+// activity 26 & mini project as a reference
 
 const jwt = require('jsonwebtoken');
 
